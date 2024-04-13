@@ -95,13 +95,13 @@ Note: if you are using **conda**, make sure that **pip** is available. If not, y
 ### Advanced version
 The advanced version integrates the basic one with additional tools coming from the FEniCS library, allowing users to: compute integral and Sobolev norms, produce norm-aware POD projections, visualize mesh-based data and more. Installation is recommended on Linux and MacOS. To get it: (i) install the basic version first, (ii) integrate the installation manually by installing [FEniCS](https://fenicsproject.org/) and any mesh generator of your choice (compatible choices incluide [mshr](https://anaconda.org/conda-forge/mshr) and [gmsh](https://anaconda.org/conda-forge/gmsh)). Note: as before, make sure that pip is available if you are using conda.
 
-### Colab installation
+### Kaggle installation
 The advanced version of the dlroms package is also available on Google Colab. To use it, include the following instructions at the beginning of your notebook:
 
     try:
          from dlroms import*
     except:
-         !pip install git+https://github.com/NicolaRFranco/dlroms.git
+         !pip install git+https://github.com/LuigiPagani/dlroms-kaggle.git 
          from dlroms import*
     
 The pip instruction will install the basic version, while the importation of the dlrom package will automatically trigger the complementary installation of FEniCS and gmsh. At the same time, this syntax will avoid redundant installations if the kernel is restarted.
