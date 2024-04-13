@@ -20,12 +20,14 @@
 #
 # Please cite the Author if you use this code for your work/research.
 
-try:
-  #import google.colab
-  from dlroms.colab import setup
-  setup()
-except:
-  None
+def setup():
+    try:
+        import dolfin
+    except ImportError:
+        print("Installing dolfin...")
+        os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
+        import dolfin
+setup()
 
 from dlroms.minns import L2, H1, Local, Geodesic, iVersion
 from dlroms.dnns import Dense, train, Clock, num2p
