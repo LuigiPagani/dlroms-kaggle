@@ -26,6 +26,17 @@ import torch
 import warnings
 from dlroms import gifs
 from dlroms.cores import coreof
+
+import os
+
+try:
+    import dolfin
+except ImportError:
+    print("Installing dolfin...")
+    os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh"')
+    os.system('bash "/tmp/fenics-install.sh"')
+    import dolfin
+    
 try:
     import dolfin
     try:
