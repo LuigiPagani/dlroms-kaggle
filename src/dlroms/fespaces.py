@@ -47,10 +47,10 @@ try:
 except:
     print("Installing dolfin...")
     import os
-    pirntf("Installling Fenics")
+    print("Installling Fenics")
     os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh"')
     os.system('bash "/tmp/fenics-install.sh"')
-    printf("Installing gmsh")
+    print("Installing gmsh")
     os.system('wget "https://fem-on-colab.github.io/releases/gmsh-install.sh" -O "/tmp/gmsh-install.sh" && bash "/tmp/gmsh-install.sh"')
 
 
