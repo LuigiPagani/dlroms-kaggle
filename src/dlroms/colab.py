@@ -24,13 +24,11 @@ from IPython.display import clear_output
 import os
 
 def setup():
-  ready = True
-  try:
-    import dolfin
-  except ImportError:
-    ready = False
-    print("Installing fenics... this should take about 30-60 seconds.")
-    os.system('wget "https://fem-on-colab.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
+    try:
+        import dolfin
+    except ImportError:
+        !wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"
+        import dolfin
 
   try:
     import gmsh
