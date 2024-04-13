@@ -45,7 +45,9 @@ try:
     inner = dolfin.inner
     div = dolfin.div
 except:
-    warnings.warn("Either dolfin or fenics are not available. Some functions might not be available or work as expected.")
+    print("Installing dolfin...")
+    os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh"')
+    os.system('bash "/tmp/fenics-install.sh"')
 
 
 def space(mesh, obj, deg, scalar = True, bubble = False):
