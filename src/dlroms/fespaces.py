@@ -46,6 +46,7 @@ try:
     div = dolfin.div
 except:
     print("Installing dolfin...")
+    import os
     os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh"')
     os.system('bash "/tmp/fenics-install.sh"')
 
