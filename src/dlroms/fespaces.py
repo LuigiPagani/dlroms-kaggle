@@ -49,6 +49,7 @@ except:
     import os
     os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh"')
     os.system('bash "/tmp/fenics-install.sh"')
+    os.system('wget "https://fem-on-colab.github.io/releases/gmsh-install.sh" -O "/tmp/gmsh-install.sh" && bash "/tmp/gmsh-install.sh"')
 
 
 def space(mesh, obj, deg, scalar = True, bubble = False):
