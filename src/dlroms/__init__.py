@@ -20,14 +20,7 @@
 #
 # Please cite the Author if you use this code for your work/research.
 
-def setup():
-    try:
-        import dolfin
-    except ImportError:
-        print("Installing dolfin...")
-        import os
-        os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
-        import dolfin
+from dlroms.colab import setup
 setup()
 
 from dlroms.minns import L2, H1, Local, Geodesic, iVersion
