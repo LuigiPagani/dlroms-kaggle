@@ -21,7 +21,7 @@
 # Please cite the Author if you use this code for your work/research.
 
 try:
-  import google.colab
+  #import google.colab
   from dlroms.colab import setup
   setup()
 except:
