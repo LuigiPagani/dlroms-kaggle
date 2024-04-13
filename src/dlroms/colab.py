@@ -25,6 +25,7 @@ import os
 
 def setup():
     print("Installing dolfin...")
+    import(os)
     os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
     import dolfin
 
