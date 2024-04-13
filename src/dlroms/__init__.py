@@ -21,6 +21,7 @@
 # Please cite the Author if you use this code for your work/research.
 
 from dlroms.colab import setup
+import os
 setup()
 
 from dlroms.minns import L2, H1, Local, Geodesic, iVersion
