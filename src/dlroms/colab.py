@@ -24,12 +24,9 @@ from IPython.display import clear_output
 import os
 
 def setup():
-    try:
-        import dolfin
-    except ImportError:
-        print("Installing dolfin...")
-        os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
-        import dolfin
+    print("Installing dolfin...")
+    os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
+    import dolfin
 
   try:
     import gmsh
