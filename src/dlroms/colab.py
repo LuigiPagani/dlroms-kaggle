@@ -27,7 +27,8 @@ def setup():
     try:
         import dolfin
     except ImportError:
-        !wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"
+        print("Installing dolfin...")
+        os.system('wget "https://fem-on-kaggle.github.io/releases/fenics-install-real.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"')
         import dolfin
 
   try:
